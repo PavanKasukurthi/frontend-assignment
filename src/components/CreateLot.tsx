@@ -2,9 +2,11 @@ import user from '../assets/user.svg'
 import reload from '../assets/reload.svg'
 import questionMark from '../assets/questionMark.svg'
 
+import { Link } from 'react-router-dom'
+
 const CreateLot = () => {
   return (
-    <div className="flex justify-center mt-40 ">
+    <div className="flex justify-center mt-32 ">
       <section className="w-[598px] h-[380px] justify-center border rounded-2xl  p-6 bg-[#1b1e33] space-y-6">
         {/* most played and ? */}
         <div className="flex justify-between ">
@@ -40,7 +42,7 @@ const CreateLot = () => {
         </div>
 
         <button className="w-[550px] h-[40px] bg-purple-500 rounded-full mb-4 text-white  font-[700] my-56">
-          Create Lot
+          <Link to="/ChooseAsset"> Create Lot</Link>
         </button>
       </section>
     </div>

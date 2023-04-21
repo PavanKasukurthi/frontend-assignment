@@ -1,13 +1,16 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import ChooseAsset from './components/ChooseAsset'
 import CreateLot from './components/CreateLot'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div className="">
-      <CreateLot />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<CreateLot />} />
+        <Route path="/ChooseAsset" element={<ChooseAsset />} />
+      </Routes>
+    </Router>
   )
 }
 
