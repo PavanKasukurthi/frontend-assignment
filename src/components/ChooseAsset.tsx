@@ -63,15 +63,14 @@ const ChooseAsset = () => {
         {/* Crypto coins */}
         <div className="h-[22rem] overflow-y-scroll scrollbar ">
           <CryptoCoins />
-          {/* <CryptoCoins />
           <CryptoCoins />
           <CryptoCoins />
           <CryptoCoins />
           <CryptoCoins />
           <CryptoCoins />
           <CryptoCoins />
-          <CryptoCoins /> */}
-
+          <CryptoCoins />
+          <CryptoCoins />
           <CryptoCoins />
         </div>
 
