@@ -2,14 +2,21 @@ import close from '../assets/close.svg'
 import CryptoCoins from './CryptoCoins'
 import search from '../assets/search.svg'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ChooseAsset = () => {
   const headings = ['Crypto', 'Indexes', 'Stocks', 'Commodities', 'Forex']
 
   const [selectedItem, setSelectedItem] = useState<number | null>(null)
+  const [assetA, setAssetA] = useState<number | null>(null)
+  const [assetB, setAssetB] = useState<number | null>(null)
 
   const handleItemClick = (index: number) => {
     setSelectedItem(index)
+    console.log(selectedItem)
+
+    setAssetA(index)
+    console.log(assetA)
   }
 
   return (
@@ -17,7 +24,9 @@ const ChooseAsset = () => {
       <section className="h-[675px] w-[589px] bg-[#1b1e33] text-white p-6 justify-center rounded-xl space-y-5 my-5">
         <section className="flex justify-between max-h-[80vh]">
           <p className="decoration-8 text-left mb-0  ">Multi-user Lot</p>
-          <img className="cursor-pointer" src={close} alt="close logo" />
+          <Link to="/">
+            <img className="cursor-pointer" src={close} alt="close logo" />
+          </Link>
         </section>
         <section className="flex justify-center align-middle ">
           <div className="h-2 w-[34rem] bg-[#ffffff0d] absolute"></div>
@@ -28,7 +37,7 @@ const ChooseAsset = () => {
           name=""
           id=""
           className="border w-[550px] h-[40px] rounded-2xl"
-          placeholder={` Search Token eg. ETH, Gold etc`}
+          placeholder={`   Search Token eg. ETH, Gold etc`}
         />
 
         {/* Headings */}
@@ -73,10 +82,13 @@ const ChooseAsset = () => {
           <CryptoCoins />
           <CryptoCoins />
         </div>
-
-        <button className="w-[550px] h-[40px] bg-gradient-to-b from-[#8B5CF6] to-[#3B82F6] rounded-full mb-4 text-white  font-[700] ">
-          Next
-        </button>
+        <div className="mb-4">
+          <Link to="/TakePosition">
+            <button className="w-[550px] h-[40px] bg-gradient-to-b from-[#9E44FF] to-[#543EFF]  rounded-full  text-white font-[700] ">
+              Next
+            </button>
+          </Link>
+        </div>
       </section>
     </div>
   )

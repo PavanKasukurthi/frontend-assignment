@@ -29,6 +29,10 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
+
+  .inBtn::-webkit-inner-spin-button {
+    display: none;
+  }
 }
 
 body {

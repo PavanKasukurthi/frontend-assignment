@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 const CreateLot = () => {
   return (
     <div className="flex justify-center mt-32 ">
-      <section className="w-[598px] h-[380px] justify-center border rounded-2xl  p-6 bg-[#1b1e33] space-y-6">
+      <section className="w-[598px] h-[350px] justify-center border rounded-2xl  p-6 bg-[#1b1e33] space-y-6">
         {/* most played and ? */}
-        <div className="flex justify-between ">
+        <div className="flex justify-between items-center ">
           <p className="text-white w-[116px] py-1.5 text-center align-middle text-[14px] leading-[17.5px] h-[34px] bg-[#14172B] border-[1px] rounded-[10px] font-['Bai Jamjuree'] ">
             Most Played
           </p>
@@ -18,7 +18,7 @@ const CreateLot = () => {
         </div>
 
         {/* user reload user */}
-        <div className="flex justify-between ">
+        <div className="flex justify-between items-center ">
           <span>
             <img src={user} alt="user1 logo" />
           </span>
@@ -40,10 +40,11 @@ const CreateLot = () => {
             the lot to start is both sides should have equal funds.
           </p>
         </div>
-
-        <button className="w-[550px] h-[40px] bg-purple-500 rounded-full mb-4 text-white  font-[700] my-56">
-          <Link to="/ChooseAsset"> Create Lot</Link>
-        </button>
+        <Link to="/ChooseAsset">
+          <button className="w-[550px] h-[40px] bg-gradient-to-b from-[#9E44FF] to-[#543EFF] rounded-full mb-4 text-white font-[700] my-7 ">
+            Create Lot
+          </button>
+        </Link>
       </section>
     </div>
   )

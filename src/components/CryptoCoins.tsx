@@ -17,11 +17,11 @@ const CryptoCoins = () => {
   const [toggle, setToggle] = useState(false)
   // const coins: Coin[] = [
   const coins = [
-    { id: 1, name: 'Ethereum', src: Ethereum },
-    { id: 2, name: 'Avalanche', src: Avalanche },
-    { id: 3, name: 'Cardano', src: Cardano },
-    { id: 4, name: 'ChainLink', src: ChainLink },
-    { id: 5, name: 'Algorand', src: Algorand },
+    { id: 1, name: 'Ethereum', src: Ethereum, value: 'Ethereum' },
+    { id: 2, name: 'Avalanche', src: Avalanche, value: 'Avalanche' },
+    { id: 3, name: 'Cardano', src: Cardano, value: 'Cardano' },
+    { id: 4, name: 'ChainLink', src: ChainLink, value: 'ChainLink' },
+    { id: 5, name: 'Algorand', src: Algorand, value: 'Algorand' },
   ]
 
   // function handleItemClick(coin: Coin) {
@@ -47,7 +47,7 @@ const CryptoCoins = () => {
       <ul className="grid grid-cols-5 gap-4 mb-7 mr-1 overflow-hidden ">
         {coins.map((coin, index) => {
           return (
-            <li>
+            <li key={index}>
               {/* <div
                   key={index}
                   onClick={() => handleItemClick(coin)}
@@ -69,7 +69,7 @@ const CryptoCoins = () => {
                     : ''
                 }`}
               >
-                <img src={coin.src} alt={coin.name} className="h-9" />
+                <img src={coin.src} alt={coin.name} className="h-9 mb-2" />
                 <p className="text-center">{coin.name}</p>
               </div>
             </li>
