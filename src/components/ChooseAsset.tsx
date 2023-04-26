@@ -1,6 +1,6 @@
 import close from '../assets/close.svg'
 import CryptoCoins from './CryptoCoins'
-import search from '../assets/search.svg'
+// import search from '../assets/search.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const ChooseAsset = () => {
 
   const [selectedItem, setSelectedItem] = useState<number | null>(null)
   const [assetA, setAssetA] = useState<number | null>(null)
-  const [assetB, setAssetB] = useState<number | null>(null)
+  // const [assetB, setAssetB] = useState<number | null>(null)
 
   const handleItemClick = (index: number) => {
     setSelectedItem(index)

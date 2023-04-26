@@ -3,7 +3,7 @@ import Algorand from '../assets/Algorand.svg'
 import Avalanche from '../assets/Avalanche.svg'
 import Cardano from '../assets/Cardano.svg'
 import ChainLink from '../assets/Chainlink.svg'
-import { SetStateAction, useState } from 'react'
+import { useState } from 'react'
 
 const CryptoCoins = () => {
   // interface Coin {
